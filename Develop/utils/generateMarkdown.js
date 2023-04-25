@@ -53,7 +53,7 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ##[Usage](#table-of-contents)
-  ${readmeContent,usage}
+  ${data.usage}
 
   ##[Credits](#table-of-contents)
   ${data.credits}

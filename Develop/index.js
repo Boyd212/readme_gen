@@ -74,10 +74,10 @@ function writeToFile(fileName, data) {
 
 async function init() {
     try {
-        const data = await inquirer.prompt(questions);
+        const data = await inquirer.prompt(questions); 
+        JSON.stringify(data);
         console.log("Your responses: ", data);
-        //data.json();
-        await writeFile('ExampleREADME.md', data);
+        await writeFile('ExampleREADME.md', parseInt(data).toString());
         const readmeContent = generateMarkdown(data);
     fs.writeFile('ExampleREADME.md', readmeContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md')
